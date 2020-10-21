@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 25px;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #222;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 72px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+/*NAV*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+}
+header:hover nav{
+    background-color: rgba(0, 0, 0, 0.5);
+    top:0;
+}
+nav {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: all 0.2s ease;
+}
+nav:after {
+    content:'';
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top:60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+nav ul li {
+    text-align: center;
+    width: 30%;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+nav ul li:hover a {
+    color: #ccc;
+}
+nav ul li a {
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+/*SECTIONS*/
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.sec-intro {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b5/Odontodactylus_scyllarus1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+.sec-intro * {
+    z-index: 1;
+}
+.sec-intro:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+article section {
+    margin: 0 auto;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article p.detail {
+    width: 75vw;
+    min-width: 250px;
+    text-align: center;
+    margin: 100px 0;
+}
+
+article section h3 {
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+article .sec-sobre-a h3 {
+    font-style: italic;
+}
+article .sec-sobre-a table {
+    width: 300px;
+}
+article .sec-sobre-a table th {
+    width: 140px;
+    text-align: right;
+    padding-right: 15px;
+}
+article .sec-sobre-a table td {
+    width: 140px;
+    text-align: left;
+    padding-left: 15px;
+}
+/*DIVS*/
+.container {
+    margin: 0 auto;
+    width: 90vw;
+    min-width: 300px;
+}
+.sec-intro .container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
